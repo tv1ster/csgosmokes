@@ -1,0 +1,10 @@
+<div *ngIf="availableMap">
+  <p>
+    Map works! This is an {{map}}
+  </p>
+  <!--<img src="/assets/img/maps/{{map}}.jpg">-->
+  <app-interactive-map [map]="map"></app-interactive-map>
+</div>
+<div *ngIf="!availableMap">
+  <p>Sorry, but map "{{map}}" is unavailable</p>
+</div>
