@@ -1,5 +1,7 @@
 import { Component, OnInit, Input  } from '@angular/core';
 
+import { Map } from '../constants/maps.constant';
+
 
 @Component({
   selector: 'app-interactive-map',
@@ -7,12 +9,11 @@ import { Component, OnInit, Input  } from '@angular/core';
   styleUrls: ['./interactive-map.component.less']
 })
 export class InteractiveMapComponent implements OnInit {
-  @Input() map;
+  @Input() map: Map;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.map);
   }
 
 }

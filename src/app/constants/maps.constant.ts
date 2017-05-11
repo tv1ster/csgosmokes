@@ -1,9 +1,18 @@
 interface Map {
-  alias: String;
+  name: String;
 }
 
 const maps: Map[] = [{
-  alias: 'mirage'
+  name: 'mirage'
 }];
 
-export { Map, maps };
+function getMap (mapName: String) {
+  const filteredMaps = maps.filter((map) => map.name === mapName);
+  if (filteredMaps.length) {
+    return filteredMaps[0];
+  } else {
+    return null;
+  }
+}
+
+export { Map, maps, getMap };
