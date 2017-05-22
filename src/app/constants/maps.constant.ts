@@ -1,9 +1,11 @@
 interface Map {
   name: String;
+  imageSrc: String;
 }
 
 const maps: Map[] = [{
-  name: 'mirage'
+  name: 'mirage',
+  imageSrc: '/assets/img/maps/mirage.jpg'
 }];
 
 function getMap (mapName: String) {
