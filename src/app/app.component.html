@@ -1,6 +1,7 @@
 <h1 routerLink="/">
   CS:GO Smokes
 </h1>
-<a routerLink='/map/mirage'>Mirage</a>
-<a routerLink='/map/cobblestone'>Cobblestone</a>
+<md-select placeholder="Map" [(ngModel)]="currentMap">
+  <md-option *ngFor="let map of maps" [routerLink]='map.link' [value]="map">{{ map.label }}</md-option>
+</md-select>
 <router-outlet></router-outlet>

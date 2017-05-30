@@ -1,0 +1,21 @@
+.throws_icon(@path) {
+  width: 80px;
+  height: 50px;
+  display: inline-block;
+  background: url(@path) center no-repeat;
+  background-size: contain;
+}
+
+.interactive-map {
+  &_togglers {
+    &_toggler {
+      display: inline-block;
+      &_smoke {
+        .throws_icon('../../assets/img/icons/smoke.png');
+      }
+      &_molotov {
+        .throws_icon('../../assets/img/icons/molotov.png');
+      }
+    }
+  }
+}

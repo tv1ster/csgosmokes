@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { InteractiveMapComponent } from './interactive-map/interactive-map.component';
-import { MdButtonToggleModule } from '@angular/material';
+import { MdButtonToggleModule,  MdSelectModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpModule,
     AppRoutingModule,
     MdButtonToggleModule,
+    MdSelectModule,
     BrowserAnimationsModule
   ],
   bootstrap: [AppComponent],

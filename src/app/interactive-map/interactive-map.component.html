@@ -1,6 +1,13 @@
-<p>
-  <md-button-toggle>Toggle me!</md-button-toggle>
-  <md-button-toggle>Toggle me!</md-button-toggle>
-  <md-button-toggle>Toggle me!</md-button-toggle>
-</p>
-<img [src]="map.imageSrc">
+<div class="interactive-map">
+  <p class="interactive-map_togglers">
+    <md-button-toggle-group [(ngModel)]="pickedThrows">
+      <md-button-toggle class="interactive-map_togglers_toggler" [value]="'smoke'" (change)="getData()">
+        <div class="interactive-map_togglers_toggler_smoke"></div>
+      </md-button-toggle>
+      <md-button-toggle class="interactive-map_togglers_toggler" [value]="'molotov'" (change)="getData()">
+        <div class="interactive-map_togglers_toggler_molotov"></div>
+      </md-button-toggle>
+    </md-button-toggle-group>
+  </p>
+  <img [src]="map.imageSrc">
+</div>
