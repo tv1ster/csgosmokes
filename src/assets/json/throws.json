@@ -1,0 +1,11 @@
+{
+  "throws": [{
+    "positionOneTop": 0,
+    "positionOneLeft": 0,
+    "positionTwoTop": 10,
+    "positionTwoLeft": 10,
+    "type": "smoke",
+    "side": "ct",
+    "map": "mirage"
+  }]
+}

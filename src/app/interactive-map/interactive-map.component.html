@@ -9,5 +9,7 @@
       </md-button-toggle>
     </md-button-toggle-group>
   </p>
-  <img [src]="map.imageSrc">
+  <div class="interactive-map_container" [ngClass]="map.name">
+    <app-throw *ngFor="let item of smokes async" [throwData]="item"></app-throw>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input  } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Map } from '../constants/maps.constant';
 import { ThrowsService } from '../throws.service';
@@ -17,10 +17,9 @@ export class InteractiveMapComponent implements OnInit {
 
   constructor(private throwsService: ThrowsService) {
     this.getData = function () {
-      this.throwsService.getThrows()
-        .then(
-          smokes => this.smokes = smokes,
-          error =>  this.errorMessage = <any>error);
+      this.throwsService.getThrows().subscribe((smokes) => {
+        this.smokes = smokes;
+      });
     };
   }
 

@@ -10,12 +10,14 @@ import { MapComponent } from './map/map.component';
 import { InteractiveMapComponent } from './interactive-map/interactive-map.component';
 import { MdButtonToggleModule,  MdSelectModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ThrowComponent } from './throw/throw.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    InteractiveMapComponent
+    InteractiveMapComponent,
+    ThrowComponent
   ],
   imports: [
     BrowserModule,
