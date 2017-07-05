@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-
+import { Component, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Throws } from '../constants/db.constant';
 import { Map } from '../constants/maps.constant';
 import { ThrowsService } from '../throws.service';
 
@@ -10,10 +10,13 @@ import { ThrowsService } from '../throws.service';
   styleUrls: ['./interactive-map.component.less'],
   providers: [ThrowsService]
 })
-export class InteractiveMapComponent implements OnInit {
+export class InteractiveMapComponent implements AfterViewInit  {
   @Input() map: Map;
+  @ViewChild('mapContainer') mapContainer: ElementRef;
+  smokes: Throws[];
+  mapContainerHeight: Number;
+  mapContainerWidth: Number;
   getData;
-  smokes;
 
   constructor(private throwsService: ThrowsService) {
     this.getData = function () {
@@ -23,7 +26,10 @@ export class InteractiveMapComponent implements OnInit {
     };
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    const domMapContainer = this.mapContainer.nativeElement;
+    this.mapContainerHeight = domMapContainer.clientHeight;
+    this.mapContainerWidth = domMapContainer.clientWidth;
   }
 
 }
