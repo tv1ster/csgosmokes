@@ -1,3 +1,10 @@
-<svg>
-  <circle cx="25" cy="25" r="20" fill="red" />
+<svg [style.width]="width" [style.height]="height">
+  <ng-template ngFor let-throw [ngForOf]="throwsData">
+    <circle [attr.cx]="throw.positionOneLeft" [attr.cy.%]="throw.positionOneTop" r="7" fill="red"></circle>
+    <circle [attr.cx]="throw.positionTwoLeft" [attr.cy.%]="throw.positionTwoTop" r="19" fill="red"></circle>
+    <line [attr.x1]="throw.positionOneLeft" [attr.y1]="throw.positionOneTop"
+          [attr.x2]="throw.positionTwoLeft" [attr.y2]="throw.positionTwoTop"
+          style="stroke:rgb(255,0,0); stroke-width:3">
+    </line>
+  </ng-template>
 </svg>

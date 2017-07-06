@@ -10,6 +10,6 @@
     </md-button-toggle-group>
   </p>
   <div class="interactive-map_container" #mapContainer [ngClass]="map.name">
-    <app-throw *ngFor="let item of smokes async" [throwData]="item" [height]="mapContainerHeight" [width]="mapContainerWidth"></app-throw>
+    <app-throw *ngIf="smokes" [throwsData]="smokes" [height]="mapContainerHeight" [width]="mapContainerWidth"></app-throw>
   </div>
 </div>

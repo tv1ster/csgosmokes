@@ -7,16 +7,14 @@ import { Throws } from '../constants/db.constant';
   styleUrls: ['./throw.component.less']
 })
 export class ThrowComponent implements OnInit {
-  @Input() throwData: Throws;
-  @Input() height: Throws;
-  @Input() width: Throws;
+  @Input() throwsData: Throws[];
+  @Input() height: number;
+  @Input() width: number;
 
   constructor() {
   }
 
   ngOnInit() {
-    // console.log(this.height);
-    // console.log(this.width);
   }
 
 }

@@ -1,8 +1,8 @@
 interface Throws {
-  positionOneTop: Number;
-  positionOneLeft: Number;
-  positionTwoTop: Number;
-  positionTwoLeft: Number;
+  positionOneTop: String;
+  positionOneLeft: String;
+  positionTwoTop: String;
+  positionTwoLeft: String;
   type: String;
   side: String;
   map: String;
