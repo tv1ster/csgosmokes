@@ -1,10 +1,15 @@
 <svg [style.width]="width" [style.height]="height">
-  <ng-template ngFor let-throw [ngForOf]="throwsData">
-    <circle [attr.cx]="throw.positionOneLeft" [attr.cy.%]="throw.positionOneTop" r="7" fill="red"></circle>
-    <circle [attr.cx]="throw.positionTwoLeft" [attr.cy.%]="throw.positionTwoTop" r="19" fill="red"></circle>
-    <line [attr.x1]="throw.positionOneLeft" [attr.y1]="throw.positionOneTop"
-          [attr.x2]="throw.positionTwoLeft" [attr.y2]="throw.positionTwoTop"
-          style="stroke:rgb(255,0,0); stroke-width:3">
+  <ng-template ngFor let-throwEl [ngForOf]="throwsData">
+    <circle [attr.cx]="throwEl.positionOneLeft" (mouseover)="hoverThrow(throwEl)"
+            (mouseout)="leaveThrow(throwEl)" [attr.cy.%]="throwEl.positionOneTop"
+            [attr.r]="throwEl.r1 || 7" fill="red"></circle>
+    <circle [attr.cx]="throwEl.positionTwoLeft" (mouseover)="hoverThrow(throwEl)"
+            (mouseout)="leaveThrow(throwEl)" [attr.cy.%]="throwEl.positionTwoTop"
+            [attr.r]="throwEl.r2 || 19" fill="red"></circle>
+    <line [attr.x1]="throwEl.positionOneLeft" (mouseover)="hoverThrow(throwEl)"
+          (mouseout)="leaveThrow(throwEl)" [attr.y1]="throwEl.positionOneTop"
+          [attr.x2]="throwEl.positionTwoLeft" [attr.y2]="throwEl.positionTwoTop"
+          style="stroke:rgb(255,0,0)" [style.strokeWidth]="throwEl.rLine || 3">
     </line>
   </ng-template>
 </svg>
