@@ -11,11 +11,13 @@ export class ThrowsService {
   constructor(private http: Http) {
   }
 
-  getThrows(mapName: string): Observable<Throws[]> {
+  getThrows(mapName: string, throwType: string): Observable<Throws[]> {
     return this.http.get('assets/json/throws.json')
       .map((resp: Response) => {
         let data = resp.json().throws;
-        return data.filter((item) => item.map === mapName);
+        return data.filter((item) => {
+          return item.map === mapName && item.type === throwType;
+        });
       });
   }
 }

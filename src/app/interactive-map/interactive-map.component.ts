@@ -20,8 +20,8 @@ export class InteractiveMapComponent implements AfterViewInit  {
   pickedThrows: string;
 
   constructor(private throwsService: ThrowsService) {
-    this.getData = function () {
-      this.throwsService.getThrows(this.map.name).subscribe((smokes) => {
+    this.getData = function (throwType: string) {
+      this.throwsService.getThrows(this.map.name, throwType).subscribe((smokes) => {
         this.smokes = smokes;
       });
     };
@@ -33,7 +33,8 @@ export class InteractiveMapComponent implements AfterViewInit  {
 
   ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
     if (changes.map && changes.map.currentValue) {
-      this.getData(changes.map.currentValue.name);
+      this.pickedThrows = this.pickedThrows ? this.pickedThrows : 'smoke';
+      this.getData(this.pickedThrows);
     }
   }
 

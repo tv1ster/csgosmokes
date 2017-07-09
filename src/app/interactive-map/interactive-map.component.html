@@ -1,10 +1,10 @@
 <div class="interactive-map">
   <p class="interactive-map_togglers">
     <md-button-toggle-group [(ngModel)]="pickedThrows">
-      <md-button-toggle class="interactive-map_togglers_toggler" [value]="'smoke'" (change)="getData()">
+      <md-button-toggle class="interactive-map_togglers_toggler" [value]="'smoke'" (change)="getData(pickedThrows)">
         <div class="interactive-map_togglers_toggler_smoke"></div>
       </md-button-toggle>
-      <md-button-toggle class="interactive-map_togglers_toggler" [value]="'molotov'" (change)="getData()">
+      <md-button-toggle class="interactive-map_togglers_toggler" [value]="'molotov'" (change)="getData(pickedThrows)">
         <div class="interactive-map_togglers_toggler_molotov"></div>
       </md-button-toggle>
     </md-button-toggle-group>

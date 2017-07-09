@@ -10,6 +10,15 @@
       "map": "mirage"
     },
     {
+      "positionOneTop": "63.5%",
+      "positionOneLeft": "70.5%",
+      "positionTwoTop": "60.5%",
+      "positionTwoLeft": "45%",
+      "type": "molotov",
+      "side": "t",
+      "map": "mirage"
+    },
+    {
       "positionOneTop": "18.5%",
       "positionOneLeft": "20.5%",
       "positionTwoTop": "50%",

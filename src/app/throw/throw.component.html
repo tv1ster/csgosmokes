@@ -1,4 +1,4 @@
-<svg [style.width]="width" [style.height]="height">
+<svg class="throwItem" [style.width]="width" [style.height]="height">
   <ng-template ngFor let-throwEl [ngForOf]="throwsData">
     <circle [attr.cx]="throwEl.positionOneLeft" (mouseover)="hoverThrow(throwEl)"
             (mouseout)="leaveThrow(throwEl)" [attr.cy.%]="throwEl.positionOneTop"
