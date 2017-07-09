@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, AfterViewInit, OnInit, OnChanges, SimpleChange } from '@angular/core';
 import { Throws } from '../constants/db.constant';
 import { Map } from '../constants/maps.constant';
 import { ThrowsService } from '../throws.service';
@@ -17,13 +17,24 @@ export class InteractiveMapComponent implements AfterViewInit  {
   mapContainerHeight: Number;
   mapContainerWidth: Number;
   getData;
+  pickedThrows: string;
 
   constructor(private throwsService: ThrowsService) {
     this.getData = function () {
-      this.throwsService.getThrows().subscribe((smokes) => {
+      this.throwsService.getThrows(this.map.name).subscribe((smokes) => {
         this.smokes = smokes;
       });
     };
+  }
+
+  ngOnInit () {
+    this.pickedThrows = 'smoke';
+  }
+
+  ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
+    if (changes.map && changes.map.currentValue) {
+      this.getData(changes.map.currentValue.name);
+    }
   }
 
   ngAfterViewInit() {

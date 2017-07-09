@@ -1,11 +1,22 @@
 {
-  "throws": [{
-    "positionOneTop": "58.5%",
-    "positionOneLeft": "81.5%",
-    "positionTwoTop": "80%",
-    "positionTwoLeft": "46%",
-    "type": "smoke",
-    "side": "ct",
-    "map": "mirage"
-  }]
+  "throws": [
+    {
+      "positionOneTop": "58.5%",
+      "positionOneLeft": "81.5%",
+      "positionTwoTop": "80%",
+      "positionTwoLeft": "46%",
+      "type": "smoke",
+      "side": "t",
+      "map": "mirage"
+    },
+    {
+      "positionOneTop": "18.5%",
+      "positionOneLeft": "20.5%",
+      "positionTwoTop": "50%",
+      "positionTwoLeft": "16%",
+      "type": "smoke",
+      "side": "ct",
+      "map": "cobblestone"
+    }
+  ]
 }
