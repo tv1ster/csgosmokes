@@ -21,8 +21,8 @@ export class InteractiveMapComponent implements AfterViewInit  {
   getData;
 
   constructor(private throwsService: ThrowsService) {
-    this.getData = function (throwType: string) {
-      this.throwsService.getThrows(this.map.name, throwType).subscribe((smokes) => {
+    this.getData = function (throwType: string = 'smoke', throwSide: string = 't') {
+      this.throwsService.getThrows(this.map.name, throwType, throwSide).subscribe((smokes) => {
         this.smokes = smokes;
       });
     };
@@ -30,12 +30,12 @@ export class InteractiveMapComponent implements AfterViewInit  {
 
   ngOnInit () {
     this.pickedThrows = 'smoke';
+    this.pickedSide = 't';
   }
 
   ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
     if (changes.map && changes.map.currentValue) {
-      this.pickedThrows = this.pickedThrows ? this.pickedThrows : 'smoke';
-      this.getData(this.pickedThrows);
+      this.getData(this.pickedThrows, this.pickedSide);
     }
   }
 
