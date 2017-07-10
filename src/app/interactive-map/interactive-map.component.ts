@@ -16,8 +16,9 @@ export class InteractiveMapComponent implements AfterViewInit  {
   smokes: Throws[];
   mapContainerHeight: Number;
   mapContainerWidth: Number;
-  getData;
   pickedThrows: string;
+  pickedSide: string;
+  getData;
 
   constructor(private throwsService: ThrowsService) {
     this.getData = function (throwType: string) {

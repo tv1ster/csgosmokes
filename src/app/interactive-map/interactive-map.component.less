@@ -10,11 +10,21 @@
   &_togglers {
     &_toggler {
       display: inline-block;
-      &_smoke {
-        .throws_icon('../../assets/img/icons/smoke.png');
+      &-type {
+        &_smoke {
+          .throws_icon('../../assets/img/icons/smoke.png');
+        }
+        &_molotov {
+          .throws_icon('../../assets/img/icons/molotov.png');
+        }
       }
-      &_molotov {
-        .throws_icon('../../assets/img/icons/molotov.png');
+      &-side {
+        &_t {
+          .throws_icon('../../assets/img/icons/t.png');
+        }
+        &_ct {
+          .throws_icon('../../assets/img/icons/ct.png');
+        }
       }
     }
   }

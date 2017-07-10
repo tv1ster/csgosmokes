@@ -1,11 +1,19 @@
 <div class="interactive-map">
   <p class="interactive-map_togglers">
     <md-button-toggle-group [(ngModel)]="pickedThrows">
-      <md-button-toggle class="interactive-map_togglers_toggler" [value]="'smoke'" (change)="getData(pickedThrows)">
-        <div class="interactive-map_togglers_toggler_smoke"></div>
+      <md-button-toggle class="interactive-map_togglers_toggler-type" [value]="'smoke'" (change)="getData(pickedThrows)">
+        <div class="interactive-map_togglers_toggler-type_smoke"></div>
       </md-button-toggle>
-      <md-button-toggle class="interactive-map_togglers_toggler" [value]="'molotov'" (change)="getData(pickedThrows)">
-        <div class="interactive-map_togglers_toggler_molotov"></div>
+      <md-button-toggle class="interactive-map_togglers_toggler-type" [value]="'molotov'" (change)="getData(pickedThrows)">
+        <div class="interactive-map_togglers_toggler-type_molotov"></div>
+      </md-button-toggle>
+    </md-button-toggle-group>
+    <md-button-toggle-group [(ngModel)]="pickedSide">
+      <md-button-toggle class="interactive-map_togglers_toggler-side" [value]="'t'" (change)="getData(pickedThrows)">
+        <div class="interactive-map_togglers_toggler-side_t"></div>
+      </md-button-toggle>
+      <md-button-toggle class="interactive-map_togglers_toggler-side" [value]="'ct'" (change)="getData(pickedThrows)">
+        <div class="interactive-map_togglers_toggler-side_ct"></div>
       </md-button-toggle>
     </md-button-toggle-group>
   </p>
