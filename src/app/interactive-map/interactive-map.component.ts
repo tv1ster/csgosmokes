@@ -10,7 +10,7 @@ import { ThrowsService } from '../throws.service';
   styleUrls: ['./interactive-map.component.less'],
   providers: [ThrowsService]
 })
-export class InteractiveMapComponent implements AfterViewInit  {
+export class InteractiveMapComponent implements AfterViewInit, OnInit, OnChanges  {
   @Input() map: Map;
   @ViewChild('mapContainer') mapContainer: ElementRef;
   smokes: Throws[];

@@ -9,15 +9,18 @@ import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { InteractiveMapComponent } from './interactive-map/interactive-map.component';
 import { MdButtonToggleModule,  MdSelectModule} from '@angular/material';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThrowComponent } from './throw/throw.component';
+import { ModalVideoComponent } from './modal-video/modal-video.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
     InteractiveMapComponent,
-    ThrowComponent
+    ThrowComponent,
+    ModalVideoComponent
   ],
   imports: [
     BrowserModule,
@@ -26,8 +29,10 @@ import { ThrowComponent } from './throw/throw.component';
     AppRoutingModule,
     MdButtonToggleModule,
     MdSelectModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule.forRoot()
   ],
+  entryComponents: [ModalVideoComponent],
   bootstrap: [AppComponent],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy }

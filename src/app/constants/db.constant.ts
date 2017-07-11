@@ -1,12 +1,14 @@
 interface Throws {
-  positionOneTop: String;
-  positionOneLeft: String;
-  positionTwoTop: String;
-  positionTwoLeft: String;
-  type: String;
-  side: String;
-  map: String;
+  positionOneTop: string;
+  positionOneLeft: string;
+  positionTwoTop: string;
+  positionTwoLeft: string;
+  type: string;
+  side: string;
+  map: string;
+  r1?: number;
+  r2?: number;
+  rLine?: number;
 }
-
 
 export { Throws };
