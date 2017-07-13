@@ -19,6 +19,7 @@ export class ThrowComponent implements OnInit {
 
   open(throwEl) {
     const modalRef = this.modalService.open(ModalVideoComponent);
+    modalRef.componentInstance.throwData = throwEl;
   }
 
   public hoverThrow(throwEl: Throws) {
