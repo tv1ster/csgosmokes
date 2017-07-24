@@ -18,7 +18,9 @@ export class ThrowComponent implements OnInit {
   }
 
   open(throwEl) {
-    const modalRef = this.modalService.open(ModalVideoComponent);
+    const modalRef = this.modalService.open(ModalVideoComponent, {
+      windowClass: 'popup-video'
+    });
     modalRef.componentInstance.throwData = throwEl;
   }
 
