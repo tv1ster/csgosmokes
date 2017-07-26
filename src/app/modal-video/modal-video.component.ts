@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, ViewEncapsulation} from '@angular/core';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
-import {ViewEncapsulation} from '@angular/core';
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -10,10 +10,13 @@ import {ViewEncapsulation} from '@angular/core';
 })
 export class ModalVideoComponent implements OnInit {
   @Input() throwData;
+  src: SafeResourceUrl;
 
-  constructor(public activeModal: NgbActiveModal) { }
+  constructor(public activeModal: NgbActiveModal, private sanitizer: DomSanitizer) {
+  }
 
   ngOnInit() {
+    this.src = this.sanitizer.bypassSecurityTrustResourceUrl(this.throwData.url);
   }
 
 }
