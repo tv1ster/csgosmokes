@@ -1,7 +1,15 @@
-<h1 routerLink="/">
-  CS:GO Smokes
-</h1>
-<md-select placeholder="Map" [(ngModel)]="currentMap">
-  <md-option *ngFor="let map of maps" [routerLink]='map.link' [value]="map">{{ map.label }}</md-option>
-</md-select>
-<router-outlet></router-outlet>
+<div class="container">
+  <header>
+    <h1 class="text-center" routerLink="/">
+      CS:GO Smokes
+    </h1>
+  </header>
+  <menu class="text-center">
+    <md-select placeholder="Map" [(ngModel)]="currentMap">
+      <md-option *ngFor="let map of maps" [routerLink]='map.link' [value]="map">{{ map.label }}</md-option>
+    </md-select>
+  </menu>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
