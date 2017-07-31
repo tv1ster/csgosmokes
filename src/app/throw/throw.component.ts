@@ -28,16 +28,22 @@ export class ThrowComponent implements OnInit {
     throwEl.r1 = 9;
     throwEl.r2 = 21;
     throwEl.rLine = 4;
+    throwEl.rBLine = 6;
   }
 
   public leaveThrow(throwEl: Throws) {
     delete throwEl.r1;
     delete throwEl.r2;
     delete throwEl.rLine;
+    delete throwEl.rBLine;
   }
 
   public getColor(throwEl: Throws) {
-    return throwEl.side === 't' ? '#FFBC79' : '#fff';
+    return throwEl.side === 't' ? '#FFBC79' : '#687D8D';
+  }
+
+  public getBorderColor(throwEl: Throws) {
+    return throwEl.side === 't' ? '#453E2C' : '#0C0F12';
   }
 
   ngOnInit() {

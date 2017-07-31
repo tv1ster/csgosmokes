@@ -1,7 +1,7 @@
 {
   "throws": [
     {
-      "positionOneTop": "58.5%",
+      "positionOneTop": "53.5%",
       "positionOneLeft": "81.5%",
       "positionTwoTop": "80%",
       "positionTwoLeft": "46%",
@@ -9,6 +9,16 @@
       "side": "t",
       "map": "mirage",
       "url": "https://www.youtube.com/embed/_bOFeh5gEJQ?autoplay=1&start=68&end=134"
+    },
+    {
+      "positionOneTop": "63.5%",
+      "positionOneLeft": "30%",
+      "positionTwoTop": "64%",
+      "positionTwoLeft": "65%",
+      "type": "smoke",
+      "side": "ct",
+      "map": "mirage",
+      "url": "https://www.youtube.com/embed/8kvkm02pFTs?autoplay=1&start=21&end=35"
     },
     {
       "positionOneTop": "63.5%",

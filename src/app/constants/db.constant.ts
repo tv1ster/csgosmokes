@@ -9,6 +9,7 @@ interface Throws {
   r1?: number;
   r2?: number;
   rLine?: number;
+  rBLine?: number;
 }
 
 export { Throws };
