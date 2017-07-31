@@ -1,15 +1,29 @@
 <svg class="throwItem" [style.width]="width" [style.height]="height">
   <ng-template ngFor let-throwEl [ngForOf]="throwsData">
-    <circle [attr.cx]="throwEl.positionOneLeft" (mouseover)="hoverThrow(throwEl)"
-            (mouseout)="leaveThrow(throwEl)" [attr.cy.%]="throwEl.positionOneTop"
-            [attr.r]="throwEl.r1 || 7" fill="red" (click)="open(throwEl)"></circle>
-    <circle [attr.cx]="throwEl.positionTwoLeft" (mouseover)="hoverThrow(throwEl)"
-            (mouseout)="leaveThrow(throwEl)" [attr.cy.%]="throwEl.positionTwoTop"
-            [attr.r]="throwEl.r2 || 19" fill="red" (click)="open(throwEl)"></circle>
-    <line [attr.x1]="throwEl.positionOneLeft" (mouseover)="hoverThrow(throwEl)"
-          (mouseout)="leaveThrow(throwEl)" [attr.y1]="throwEl.positionOneTop"
-          [attr.x2]="throwEl.positionTwoLeft" [attr.y2]="throwEl.positionTwoTop"
-          style="stroke:rgb(255,0,0)" [style.strokeWidth]="throwEl.rLine || 3"
+    <circle [attr.cx]="throwEl.positionOneLeft"
+            (mouseover)="hoverThrow(throwEl)"
+            (mouseout)="leaveThrow(throwEl)"
+            [attr.cy.%]="throwEl.positionOneTop"
+            [attr.r]="throwEl.r1 || 7"
+            [attr.fill]="getColor(throwEl)"
+            stroke="#453E2C"
+            (click)="open(throwEl)"></circle>
+    <circle [attr.cx]="throwEl.positionTwoLeft"
+            (mouseover)="hoverThrow(throwEl)"
+            (mouseout)="leaveThrow(throwEl)"
+            [attr.cy.%]="throwEl.positionTwoTop"
+            [attr.r]="throwEl.r2 || 19"
+            [attr.fill]="getColor(throwEl)"
+            stroke="#453E2C"
+            (click)="open(throwEl)"></circle>
+    <line [attr.x1]="throwEl.positionOneLeft"
+          (mouseover)="hoverThrow(throwEl)"
+          (mouseout)="leaveThrow(throwEl)"
+          [attr.y1]="throwEl.positionOneTop"
+          [attr.x2]="throwEl.positionTwoLeft"
+          [attr.y2]="throwEl.positionTwoTop"
+          [style.stroke]="getColor(throwEl)"
+          [style.strokeWidth]="throwEl.rLine || 3"
           (click)="open(throwEl)">
     </line>
   </ng-template>

@@ -30,10 +30,14 @@ export class ThrowComponent implements OnInit {
     throwEl.rLine = 4;
   }
 
-  public leaveThrow(throwEl) {
+  public leaveThrow(throwEl: Throws) {
     delete throwEl.r1;
     delete throwEl.r2;
     delete throwEl.rLine;
+  }
+
+  public getColor(throwEl: Throws) {
+    return throwEl.side === 't' ? '#FFBC79' : '#fff';
   }
 
   ngOnInit() {
