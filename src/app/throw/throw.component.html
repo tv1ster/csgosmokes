@@ -10,19 +10,19 @@
           [style.strokeWidth]="throwEl.rBLine || 5"
           (click)="open(throwEl)">
     </line>
-    <circle [attr.cx]="throwEl.positionOneLeft"
-            (mouseover)="hoverThrow(throwEl)"
+    <circle (mouseover)="hoverThrow(throwEl)"
             (mouseout)="leaveThrow(throwEl)"
-            [attr.cy.%]="throwEl.positionOneTop"
+            [attr.cy]="throwEl.positionOneTop"
+            [attr.cx]="throwEl.positionOneLeft"
             [attr.r]="throwEl.r1 || 7"
             [attr.fill]="getColor(throwEl)"
             [attr.stroke]="getBorderColor(throwEl)"
             (click)="open(throwEl)">
     </circle>
-    <circle [attr.cx]="throwEl.positionTwoLeft"
-            (mouseover)="hoverThrow(throwEl)"
+    <circle (mouseover)="hoverThrow(throwEl)"
             (mouseout)="leaveThrow(throwEl)"
-            [attr.cy.%]="throwEl.positionTwoTop"
+            [attr.cy]="throwEl.positionTwoTop"
+            [attr.cx]="throwEl.positionTwoLeft"
             [attr.r]="throwEl.r2 || 19"
             [attr.fill]="getColor(throwEl)"
             [attr.stroke]="getBorderColor(throwEl)"
