@@ -1,5 +1,5 @@
 <svg class="throwItem" [style.width]="width" [style.height]="height">
-  <ng-template ngFor let-throwEl [ngForOf]="throwsData">
+  <ng-template ngFor let-throwEl [ngForOf]="throwsData | async">
     <line [attr.x1]="throwEl.positionOneLeft"
           (mouseover)="hoverThrow(throwEl)"
           (mouseout)="leaveThrow(throwEl)"

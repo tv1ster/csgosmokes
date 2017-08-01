@@ -1,8 +1,8 @@
 interface Map {
-  name: String;
-  link: String;
-  label: String;
-  imageSrc: String;
+  name: string;
+  link: string;
+  label: string;
+  imageSrc: string;
 }
 
 const maps: Map[] = [{
