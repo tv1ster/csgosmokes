@@ -1,12 +1,8 @@
-<button (click)="login()">
-  login works!
-</button>
-<button (click)="check()">
-  check
-</button>
-<button (click)="logout()">
-  log out
-</button>
-<p *ngIf="afAuth.authState | async; let user;">
-  {{user.displayName}}
-</p>
+<div *ngIf="afAuth.authState | async; let user; else showLogin">
+  <img class="login_avatar" [src]="user.photoURL">
+  <span class="login_name">{{user.displayName}}</span>
+  <button class="login_btn btn btn-outline-secondary" (click)="logout()">Log out</button>
+</div>
+<ng-template #showLogin>
+  <button class="login_btn btn btn-outline-secondary" (click)="login()">Login with Google</button>
+</ng-template>
