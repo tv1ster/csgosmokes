@@ -1,0 +1,12 @@
+<button (click)="login()">
+  login works!
+</button>
+<button (click)="check()">
+  check
+</button>
+<button (click)="logout()">
+  log out
+</button>
+<p *ngIf="afAuth.authState | async; let user;">
+  {{user.displayName}}
+</p>

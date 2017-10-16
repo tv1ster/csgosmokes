@@ -15,6 +15,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThrowComponent } from './throw/throw.component';
 import { ModalVideoComponent } from './modal-video/modal-video.component';
+import { LoginComponent } from './login/login.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ModalVideoComponent } from './modal-video/modal-video.component';
     MapComponent,
     InteractiveMapComponent,
     ThrowComponent,
-    ModalVideoComponent
+    ModalVideoComponent,
+    LoginComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
