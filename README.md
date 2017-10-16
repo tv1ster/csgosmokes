@@ -1,5 +1,6 @@
 # Csgosmokes
 
+This is my pet project, where I creating helpfull site for CS GO game. I am trying Anular 4 with all it's features and also trying Firebase. 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
